@@ -3,12 +3,12 @@ FROM ubuntu
 MAINTAINER ich777
 
 RUN apt-get update
-RUN apt-get -y install wget unzip golang nodejs
+RUN apt-get -y install wget unzip golang libcurl4-gnutls-dev libsdl2-2.0-0
 
 ENV DATA_DIR="/serverdata"
 ENV SERVER_DIR="${DATA_DIR}/serverfiles"
 ENV GAME_PARAMS=""
-ENV GAME_PORT=25565
+ENV GAME_PORT=20545
 ENV GAME_STREAM="stable"
 ENV PA_ACC_NAME=""
 ENV PA_ACC_PWD=""
