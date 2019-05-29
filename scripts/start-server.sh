@@ -13,11 +13,11 @@ if [ "${UPDATE_ON_START}" == "true" ]; then
 		cd ${SERVER_DIR}
 		wget -qO ${SERVER_DIR}/papatcher.go https://raw.githubusercontent.com/planetary-annihilation/papatcher/master/papatcher.go
 	fi
-	if [ -z "${PA_ACC_NAME}"]; then
+	if [ -z "${PA_ACC_NAME}" ]; then
 		echo "---Please enter your PA account name and restart the Container---"
     	sleep infinity
 	fi
-	if [ -z "${PA_ACC_PWD}"]; then
+	if [ -z "${PA_ACC_PWD}" ]; then
 		echo "---Please enter your PA account password and restart the Container---"
     	sleep infinity
 	fi
@@ -28,11 +28,11 @@ else
 		cd ${SERVER_DIR}
 		wget -qO ${SERVER_DIR}/papatcher.go https://raw.githubusercontent.com/planetary-annihilation/papatcher/master/papatcher.go
 	fi
-	if [ -z "${PA_ACC_NAME}"]; then
+	if [ -z "${PA_ACC_NAME}" ]; then
 		echo "---Please enter your PA account name and restart the Container---"
     	sleep infinity
 	fi
-	if [ -z "${PA_ACC_PWD}"]; then
+	if [ -z "${PA_ACC_PWD}" ]; then
 		echo "---Please enter your PA account password and restart the Container---"
     	sleep infinity
 	fi
