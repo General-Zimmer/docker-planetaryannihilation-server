@@ -3,7 +3,7 @@ FROM ubuntu
 MAINTAINER ich777
 
 RUN apt-get update
-RUN apt-get -y install wget unzip golang libcurl4-gnutls-dev libsdl2-2.0-0
+RUN apt-get -y install wget unzip golang libcurl4-gnutls-dev libsdl2-2.0-0 libgl1-mesa-glx
 
 ENV DATA_DIR="/serverdata"
 ENV SERVER_DIR="${DATA_DIR}/serverfiles"
