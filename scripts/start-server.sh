@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "---Setting umask to ${UMASK}---"
+umask ${UMASK}
 if [ "${UPDATE_ON_START}" == "true" ]; then
 	if [ -f ${SERVER_DIR}/papatcher.go ]; then
     	rm ${SERVER_DIR}/papatcher.go
@@ -80,7 +82,7 @@ else
 fi
 
 echo "---Preparing Server---"
-chmod -R 770 ${DATA_DIR}
+chmod -R 777 ${DATA_DIR}
 
 echo "---Starting Server---"
 if [ "${GAME_STREAM}" == "stable" ]; then
