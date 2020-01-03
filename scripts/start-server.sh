@@ -13,7 +13,12 @@ if [ "${UPDATE_ON_START}" == "true" ]; then
         echo "-------------------------------------------------"
 		echo
 		cd ${SERVER_DIR}
-		wget -qO ${SERVER_DIR}/papatcher.go https://raw.githubusercontent.com/planetary-annihilation/papatcher/master/papatcher.go
+		if wget -q -nc --show-progress --progress=bar:force:noscroll https://raw.githubusercontent.com/planetary-annihilation/papatcher/master/papatcher.go ; then
+        	echo "---Sucessfully downloaded 'papatcher.go'---"
+		else
+        	echo "---Can't download 'papatcher.go' putting server into sleep mode---"
+            sleep infinity
+		fi
 	fi
 	if [ -z "${PA_ACC_NAME}" ]; then
 		echo "---Please enter your PA account name and restart the Container---"
@@ -28,7 +33,12 @@ else
 	if [ ! -f ${SERVER_DIR}/papatcher.go ]; then
 		echo "---Downloading 'papatcher.go'---"
 		cd ${SERVER_DIR}
-		wget -qO ${SERVER_DIR}/papatcher.go https://raw.githubusercontent.com/planetary-annihilation/papatcher/master/papatcher.go
+		if wget -q -nc --show-progress --progress=bar:force:noscroll https://raw.githubusercontent.com/planetary-annihilation/papatcher/master/papatcher.go ; then
+        	echo "---Sucessfully downloaded 'papatcher.go'---"
+		else
+        	echo "---Can't download 'papatcher.go' putting server into sleep mode---"
+            sleep infinity
+		fi
 	fi
 	if [ -z "${PA_ACC_NAME}" ]; then
 		echo "---Please enter your PA account name and restart the Container---"
