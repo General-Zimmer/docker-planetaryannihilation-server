@@ -1,4 +1,7 @@
 #!/bin/bash
+export LD_LIBRARY_PATH=/usr/lib
+export XDG_RUNTIME_DIR=/serverdata/serverfiles
+
 if [ "${UPDATE_ON_START}" == "true" ]; then
 	if [ -f ${SERVER_DIR}/papatcher.go ]; then
     	rm ${SERVER_DIR}/papatcher.go
