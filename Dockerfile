@@ -26,7 +26,7 @@ ENV USER="PA"
 
 RUN mkdir $DATA_DIR && \
 	mkdir $SERVER_DIR && \
-	useradd -d $DATA_DIR -s /bin/bash $USER && \
+	useradd -d $SERVER_DIR -s /bin/bash $USER && \
 	chown -R $USER $DATA_DIR && \
 	ulimit -n 2048
 
