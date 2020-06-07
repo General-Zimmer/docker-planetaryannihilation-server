@@ -2,8 +2,9 @@ FROM ich777/debian-baseimage
 
 LABEL maintainer="admin@minenet.at"
 
-RUN apt-get update && \
-	apt-get -y install --no-install-recommends unzip golang libcurl4-gnutls-dev libsdl2-2.0-0 libgl1-mesa-glx && \
+RUN echo "deb http://deb.debian.org/debian bullseye main" >> /etc/apt/sources.list
+	apt-get update && \
+	apt-get -y install --no-install-recommends unzip golang libcurl4-gnutls-dev libsdl2-2.0-0 libgl1-mesa-glx gcc-9 && \
 	rm -rf /var/lib/apt/lists/*
 
 ENV DATA_DIR="/serverdata"
