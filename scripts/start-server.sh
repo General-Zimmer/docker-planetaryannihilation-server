@@ -14,7 +14,7 @@ if [ "${UPDATE_ON_START}" == "true" ]; then
         echo "-------------------------------------------------"
 		echo
 		cd ${SERVER_DIR}
-		if wget -q -nc --show-progress --progress=bar:force:noscroll https://raw.githubusercontent.com/planetary-annihilation/papatcher/master/papatcher.go ; then
+		if wget -q -nc --show-progress --progress=bar:force:noscroll https://raw.githubusercontent.com/General-Zimmer/papatcher/master/papatcher.go ; then
         	echo "---Successfully downloaded 'papatcher.go'---"
 		else
         	echo "---Can't download 'papatcher.go' putting server into sleep mode---"
@@ -34,7 +34,7 @@ else
 	if [ ! -f ${SERVER_DIR}/papatcher.go ]; then
 		echo "---Downloading 'papatcher.go'---"
 		cd ${SERVER_DIR}
-		if wget -q -nc --show-progress --progress=bar:force:noscroll https://raw.githubusercontent.com/planetary-annihilation/papatcher/master/papatcher.go ; then
+		if wget -q -nc --show-progress --progress=bar:force:noscroll https://raw.githubusercontent.com/General-Zimmer/papatcher/master/papatcher.go ; then
         	echo "---Successfully downloaded 'papatcher.go'---"
 		else
         	echo "---Can't download 'papatcher.go' putting server into sleep mode---"
